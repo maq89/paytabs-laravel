@@ -1,0 +1,19 @@
+{
+    "name": "maq89/paytabs-laravel",
+    "license": "LGPL-3.0",
+    "description": "Paytabs Laravel",
+    "authors": [
+        {
+            "name": "Musaib Qureshi",
+            "email": "maq.s89@gmail.com"
+        }
+    ],
+    "require": {
+    },
+	"autoload": {
+        "psr-0": {
+            "Damas\\Paytabs": "src/"
+        }
+    },
+   "minimum-stability": "stable"
+}
