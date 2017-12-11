@@ -10,7 +10,7 @@ composer require maq89/paytabs-laravel
 Once this operation completes, the final step is to add the service provider. Open config/app.php, and add a new item to the providers array.
 ```php
 'providers' => [
-	...
+	.....
 	Damas\Paytabs\PaytabsServiceProvider::class,
 ],
 ```
