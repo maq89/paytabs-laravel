@@ -54,7 +54,7 @@ class paytabs {
 
 	function verify_payment($payment_reference){
 		$values['merchant_email'] = $this->merchant_email;
-		$values['merchant_secretKey'] = $this->merchant_secretKey;
+		$values['secret_key'] = $this->merchant_secretKey;
 		$values['payment_reference'] = $payment_reference;
 		return json_decode($this->runPost(VERIFY_URL, $values));
 	}
