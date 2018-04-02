@@ -27,7 +27,7 @@ Now add the alias.
 
 ### Example:
 ```php
-Route::get('/faturah', function () {
+Route::get('/paytabs', function () {
     $pt = Paytabs::getInstance("MERCHANT_EMAIL", "SECRET_KEY");
 	$result = $pt->create_pay_page(array(
 		"merchant_email" => "MERCHANT_EMAIL",
