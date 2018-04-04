@@ -25,9 +25,10 @@ Now add the alias.
 ```
 
 
-### Example:
+## Example:
+### Create Payment Page:
 ```php
-Route::get('/paytabs', function () {
+Route::get('/paytabs_payment', function () {
     $pt = Paytabs::getInstance("MERCHANT_EMAIL", "SECRET_KEY");
 	$result = $pt->create_pay_page(array(
 		"merchant_email" => "MERCHANT_EMAIL",
@@ -61,6 +62,24 @@ Route::get('/paytabs', function () {
 		'return_url' => "https://www.mystore.com/paytabs_api/result.php",
 		"cms_with_version" => "API USING PHP"
 	));
-    return $result->payment_url;
+    
+    	if($result->response_code == 4012){
+	    return redirect($result->payment_url);
+        }
+        return $result->result;
 });
+```
+### Verify Payment:
+```php
+Route::post('/paytabs_response', function(Request $request){
+    $pt = Paytabs::getInstance("MERCHANT_EMAIL", "SECRET_KEY");
+    $result = $pt->verify_payment($request->payment_reference);
+    if($result->response_code == 100){
+        // Payment Success
+    }
+    return $result->result;
+});
+
+you will need to exclude your paytabs_response route from CSRF protection
+
 ```
