@@ -1,6 +1,6 @@
 {
     "name": "maq89/paytabs-laravel",
-    "version": "1.1.0",		
+    "version": "1.0.0",		
     "license": "LGPL-3.0",
     "description": "Paytabs Laravel",
     "authors": [
@@ -15,5 +15,6 @@
         "psr-0": {
             "Damas\\Paytabs": "src/"
         }
-    }	
+    },
+    "minimum-stability": "stable"
 }
