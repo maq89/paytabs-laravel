@@ -11,11 +11,9 @@
     ],
     "require": {
     },
-	"autoload": {
+    "autoload": {
         "psr-0": {
             "Damas\\Paytabs": "src/"
         }
-    },
-   "minimum-stability": "stable",
-   "prefer-stable": true	
+    }	
 }
