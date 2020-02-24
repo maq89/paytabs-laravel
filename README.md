@@ -7,7 +7,7 @@ Begin by installing this package through Composer. Just run following command to
 composer require maq89/paytabs-laravel
 ```
 
-Once this operation completes, the final step is to add the service provider. Open config/app.php, and add a new item to the providers array.
+Once this operation completes the package will automatically be discovered for **Laravel 5.6 and above**, otherwise, the final step is to add the service provider. Open `config/app.php`, and add a new item to the providers array.
 ```php
 'providers' => [
 	...

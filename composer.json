@@ -17,5 +17,15 @@
             "Damas\\Paytabs": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Damas\\Paytabs\\PaytabsServiceProvider"
+            ],
+            "aliases": {
+                "Paytabs": "Damas\\Paytabs\\Facades\\PaytabsFacade"
+            }
+        }
+    }
 }
